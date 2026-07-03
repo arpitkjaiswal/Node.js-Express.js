@@ -1,15 +1,9 @@
-const amount = 12
 
-if(amount < 12 ){
-    console.log('small number')
-}
-else{
-    console.log('large number')
-}
+const names = require('./4-names')
+const sayHi = require('./5-utlis')
+const data = require('./6-alternative-flavor')
+console.log(data)
 
-console.log(`hey it's my first node app!!!`)
-
-
-
-
-
+sayHi('susan')
+sayHi(names.john)
+sayHi(names.peter)
