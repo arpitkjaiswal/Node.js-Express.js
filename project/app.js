@@ -1,13 +1,15 @@
-const express = require("express");
+const amount = 12
 
-const app = express();
+if(amount < 12 ){
+    console.log('small number')
+}
+else{
+    console.log('large number')
+}
 
-const PORT = 3000;
+console.log(`hey it's my first node app!!!`)
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+
+
+
