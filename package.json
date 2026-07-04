@@ -4,8 +4,9 @@
   "description": "A code repo for Node.js and Express.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "start": "node app.js",
+  "dev": "nodemon app.js"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arpitkjaiswal/Node.js-Express.js.git"
