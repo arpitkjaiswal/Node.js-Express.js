@@ -4,9 +4,9 @@
   "description": "A code repo for Node.js and Express.js",
   "main": "index.js",
   "scripts": {
-  "start": "node app.js",
-  "dev": "nodemon app.js"
-},
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arpitkjaiswal/Node.js-Express.js.git"
@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/arpitkjaiswal/Node.js-Express.js#readme",
   "dependencies": {
-    "bootstrap": "^5.3.8",
     "lodash": "^4.18.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
   }
 }
+ 
