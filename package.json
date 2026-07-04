@@ -1,0 +1,25 @@
+{
+  "name": "node.js-express",
+  "version": "1.0.0",
+  "description": "A code repo for Node.js and Express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpitkjaiswal/Node.js-Express.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/arpitkjaiswal/Node.js-Express.js/issues"
+  },
+  "homepage": "https://github.com/arpitkjaiswal/Node.js-Express.js#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "lodash": "^4.18.1"
+  }
+}
