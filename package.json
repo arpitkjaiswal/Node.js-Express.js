@@ -1,24 +1,24 @@
 {
-  "name": "node.js-express",
+  "name": "project2",
   "version": "1.0.0",
   "description": "A code repo for Node.js and Express.js",
-  "main": "index.js",
-  "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+  "keywords": [],
+  "homepage": "https://github.com/arpitkjaiswal/Node.js-Express.js#readme",
+  "bugs": {
+    "url": "https://github.com/arpitkjaiswal/Node.js-Express.js/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arpitkjaiswal/Node.js-Express.js.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "Arpit",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/arpitkjaiswal/Node.js-Express.js/issues"
+  "main": "index.js",
+  "scripts": {
+    "start": "node hello.js",
+    "dev": "nodemon app.js"
   },
-  "homepage": "https://github.com/arpitkjaiswal/Node.js-Express.js#readme",
   "dependencies": {
     "lodash": "^4.18.1"
   },
@@ -26,4 +26,3 @@
     "nodemon": "^3.1.14"
   }
 }
- 
