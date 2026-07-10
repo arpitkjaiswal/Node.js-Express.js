@@ -1,33 +1,25 @@
-const http = require('http');
+const express  = require("express");
 
-const fs = require("fs")
+const app = express()
 
-const url = require('url')
+app.get('/',(req,res) => {
 
+    return res.send("Hello from Home Page")
 
-const myServer =  http.createServer( (req,res) => {
-    if(req.url === '/favicon.ico') return res.end()
-    const log = `${new Date()}:  ${req.url } New Req Recived\n`;
-    const myUrl = url.parse(req.url, true)
-    console.log(myUrl)
- 
- fs.appendFile("log.txt", log, (err, data) => {
-   switch(myUrl.pathname){
-    case '/' : res.end("HomePage");
-    break
-    case '/about' : 
-    const username = myUrl.query.myname;
-  
-    res.end(`Hi,  ${username}`)
+})
 
-    break
-    default:
-        res.end("404  not found")
+app.get('/about',(req,res) => {
+    return res.send("Hello from About Page" + " hey " + req.query.myname)
 
-    }
-
-    })
-});
+})
 
 
-myServer.listen(8000,() => console.log("Server Started!"));
+app.listen(8000, () => console.log(" Server Started "))
+
+
+
+
+// const myServer =  http.createServer(app)
+
+
+// myServer.listen(8000,() => console.log("Server Started!"));
