@@ -14,6 +14,12 @@ app.get('/about',(req,res) => {
 })
 
 
+app.get("/profile", (req , res) => {
+   
+   return res.send("Profile Page");
+   
+})
+
 app.listen(8000, () => console.log(" Server Started "))
 
 
