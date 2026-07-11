@@ -6,6 +6,12 @@ GET /api/users - Retrieves a list of users
 
 GET /api/users/users/{id} - Retrieves a specific user by ID
 
+Dynamic Path Parameter
+
+GET /api/users/users/:id
+:id -> variable | Dynamic
+
+
 POST /api/users/users - Creates a new user
 
 
