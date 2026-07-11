@@ -20,8 +20,8 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) => {
-    if (req.method === "POST" && !req.body.first_name) {
-        return res.status(400).json({ error: "first_name is required" });
+    if (!req.body.first_name ) {
+        return res.status(400).json({ error: "All fields are required" });
     }   
    // console.log("Request body:", req.myProperty);
     next();
@@ -72,7 +72,7 @@ app.post("/api/users", (req,res) => {
     users.push({...body , id : users.length + 1});
     fs.writeFile("./MOCK_DATA.json", JSON.stringify(users),(err, data) => {
         if(err) throw err;
-          return res.json({message : "User Created" , id : users.length})
+          return res.status(201).json({message : "User Created" , id : users.length})
     })
   
 })
