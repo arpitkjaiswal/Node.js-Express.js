@@ -1,9 +1,31 @@
 const express = require("express")
-
+const fs = require("fs")
 const users = require("./MOCK_DATA.json")
 const app  = express()
 
 const Port = 8000;
+
+// Middleware - it is a function which will run before the route handler
+
+app.use(express.urlencoded({extended : false}))
+
+app.use((req, res, next) => {
+    fs.appendFile("./logs.txt", `${new Date().toISOString()} : ${req.ip} - ${req.method} ${req.path}\n`, 
+    (err) => {
+        if (err) {
+            console.error("Error writing to log file:", err);
+        }
+        next();
+    });
+});
+
+app.use((req, res, next) => {
+    if (req.method === "POST" && !req.body.first_name) {
+        return res.status(400).json({ error: "first_name is required" });
+    }   
+    console.log("Request body:", req.myProperty);
+    next();
+});
 
 // Routes
 
@@ -29,16 +51,27 @@ return res.json(user)
 
 })
 .patch((req,res) => {
+
    // it will update the user with the given id
+
     return res.json(user)
 })
 .delete((req,res) => {
+
     // it will delete the user with the given id
+
     return res.json(user)
 })
 
 app.post("/api/users", (req,res) => {
-    return res.json({message : "User Created"})
+     
+    const body = req.body;
+    users.push({...body , id : users.length + 1});
+    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users),(err, data) => {
+        if(err) throw err;
+          return res.json({message : "User Created" , id : users.length})
+    })
+  
 })
 
 

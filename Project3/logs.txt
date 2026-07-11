@@ -1,0 +1,5 @@
+2026-07-11T21:32:21.922Z - GET /api/users
+2026-07-11T21:32:29.219Z - GET /api/users
+2026-07-11T21:34:57.157Z - POST /api/users
+2026-07-11T21:36:23.922Z : ::1 - POST /api/users
+2026-07-11T21:36:37.913Z : ::1 - GET /api/users
