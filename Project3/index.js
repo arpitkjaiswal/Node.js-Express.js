@@ -23,13 +23,16 @@ app.use((req, res, next) => {
     if (req.method === "POST" && !req.body.first_name) {
         return res.status(400).json({ error: "first_name is required" });
     }   
-    console.log("Request body:", req.myProperty);
+   // console.log("Request body:", req.myProperty);
     next();
 });
 
 // Routes
 
 app.get("/api/users", (req , res) => {
+   
+    res.setHeader("X-MyName", "Luffy"); // Custom header
+    // Always add X to custom headers to avoid conflicts with standard headers
     return res.json(users);
 });
 
@@ -40,7 +43,7 @@ app.get("/users", (req,res) => {
    </ul>
    `
    return res.send(html);
-})
+}) 
 
 app.route("/api/users/:id")
 .get((req, res) => {
